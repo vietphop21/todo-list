@@ -92,7 +92,7 @@ export const Todolist = () => {
         let current = todo;
         current = current.filter(itcurrent => itcurrent.id !== item.id)
         setTodo(current)
-        toast.success("Delete success !!!")
+        toast.success("Delete success !!!!")
     }
     return (
         <>
