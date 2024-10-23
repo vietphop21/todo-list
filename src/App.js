@@ -1,8 +1,15 @@
-import './App.css';
-import { Todolist } from './Todo';
+import "./App.css";
+import { Header } from "./Header/header";
+import { ListAdmin } from "./ListAdmin/listAdmin";
+import ListMenu from "./ListMenu/listMenu";
+
 function App() {
   return (
-   <Todolist/>
+    <>
+      <Header />
+      <ListMenu />
+      <ListAdmin />
+    </>
   );
 }
 
