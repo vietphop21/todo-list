@@ -9,7 +9,6 @@ import { useRef } from "react";
 import { DeleteOutlined } from "@ant-design/icons";
 export const Todolist = () => {
   const [show, setShow] = useState(false);
-  const s = 0;
   let t = "";
   const inputRef = useRef();
   const [work, setWork] = useState("");
@@ -18,15 +17,15 @@ export const Todolist = () => {
     { id: 2, title: "Making video" },
     { id: 3, title: "Playing game" },
   ]);
-  const [text, setText] = useState(false);
-  const [count, setCount] = useState();
   const handleEdittodo = (item) => {
     let newtodo = [...todo];
     let current = todo;
-    current = current.filter((itemcr) => {
-      if (item.title === itemcr.title) t = item.title;
-      return item;
-    });
+    current =
+      current?.length > 0 &&
+      current?.filter((itemcr) => {
+        if (item.title === itemcr.title) t = item.title;
+        return item;
+      });
     if (t === item.title) {
       toast.error("Trùng công việc khác, vui lòng nhập lại !!!");
       return;
@@ -46,13 +45,15 @@ export const Todolist = () => {
     const s = Math.floor(Math.random() * 10000);
     let current = todo;
     let a;
-    current = current.filter((item) => {
-      if (item.title === `${work}`) a = item.title;
-    });
+    current =
+      current?.length > 0 &&
+      current?.filter((item) => {
+        if (item.title === `${work}`) a = item.title;
+      });
 
     if (work === "") {
       setShow(false);
-      inputRef.current.focus();
+      inputRef?.current?.focus();
       toast.error("Vui lòng không được để trống !!!");
       return;
     } else if (work === `${a}`) {
