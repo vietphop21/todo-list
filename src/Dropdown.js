@@ -1,28 +1,26 @@
-import { DownOutlined } from '@ant-design/icons';
-import { Dropdown, Space, Typography } from 'antd';
-import Tag from 'antd';
+import { DownOutlined } from "@ant-design/icons";
+import { Dropdown, Space, Typography } from "antd";
 const items = [
   {
-    key: '1',
-    label: 'High',
+    key: "1",
+    label: "High",
   },
   {
-    key: '2',
-    label: 'Low',
+    key: "2",
+    label: "Low",
   },
-  
 ];
 const Dropdown1 = () => (
   <Dropdown
     menu={{
       items,
       selectable: true,
-      defaultSelectedKeys: ['3'],
+      defaultSelectedKeys: ["3"],
     }}
   >
     <Typography.Link>
       <Space>
-       Độ ưu tiên
+        Độ ưu tiên
         <DownOutlined />
       </Space>
     </Typography.Link>
