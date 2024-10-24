@@ -13,7 +13,7 @@ function App() {
     if (location.pathname !== "/danh-sach-admin") {
       navigate("/danh-sach-admin");
     }
-  }, [location]);
+  }, [location, navigate]);
 
   return (
     <>
