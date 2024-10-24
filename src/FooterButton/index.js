@@ -16,11 +16,12 @@ export const FooterButton = () => {
             right: 0,
             display: "flex", // Sử dụng flexbox
             justifyContent: "space-between", // Căn giữa các nút
+            height: "40px",
           }}
         >
           <Button
             variant="contained"
-            sx={{ backgroundColor: "red", flex: 1 }} // Màu đỏ
+            sx={{ backgroundColor: "#ff0000", flex: 1, padding: "5px" }} // Màu đỏ
           >
             <Link
               href="https://checkscam.vn/to-cao-lua-dao/?_gl=1*lf4aqc*_ga*MTkzODA4MDAwNy4xNzI1ODA1MTcy*_ga_8WTQQ9LFJB*MTcyOTc3NTcxNi43LjEuMTcyOTc3NzYyMC41Ni4wLjE4MjY5NDgwODk."
@@ -36,7 +37,7 @@ export const FooterButton = () => {
           </Button>
           <Button
             variant="contained"
-            sx={{ backgroundColor: "skyblue", flex: 1 }} // Màu xanh da trời
+            sx={{ backgroundColor: "#008ff3", flex: 1, padding: "5px" }} // Màu xanh da trời
           >
             <Link
               href={`${DOMAIN}danh-sach-admin`}
