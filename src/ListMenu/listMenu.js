@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Grid } from "@mui/material";
+import { ListAdmin } from "../ListAdmin/listAdmin";
+import { dataAdmin } from "../common";
 
 const services = [
   { value: "all", text: "Tất cả" },
@@ -54,9 +56,27 @@ const services = [
 
 const ListMenu = () => {
   const [activeService, setActiveService] = useState("all");
+  const [adminData, setAdminData] = useState();
+  useEffect(() => {
+    setAdminData(dataAdmin);
+  }, []);
+
   const handleServiceClick = (serviceValue) => {
     setActiveService(serviceValue);
+    if (serviceValue === "all") {
+      const sortedAdminData = [...dataAdmin].sort((a, b) => a.id - b.id);
+      setAdminData(sortedAdminData);
+    } else {
+      const randomAdmins = adminData
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 30);
+      setAdminData(randomAdmins);
+    }
   };
+
+  console.log(dataAdmin);
+
+  console.log(adminData);
 
   return (
     <div>
@@ -89,6 +109,7 @@ const ListMenu = () => {
           </Grid>
         ))}
       </Grid>
+      <ListAdmin adminData={adminData} />
     </div>
   );
 };
