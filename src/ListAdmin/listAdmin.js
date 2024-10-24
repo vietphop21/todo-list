@@ -48,7 +48,7 @@ export const ListAdmin = ({ adminData = dataAdmin }) => {
               flexDirection="column"
               alignItems="center"
               gap={isMobile ? 3 : 1.5}
-              height={80}
+              height={90}
               sx={{ cursor: "pointer" }}
             >
               <Link
