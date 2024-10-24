@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { Grid, Box, Avatar, useMediaQuery, Link } from "@mui/material";
-import { cacheAvatarImage } from "../common";
+import { cacheAvatarImage, dataAdmin } from "../common";
 
-export const ListAdmin = ({ adminData }) => {
+export const ListAdmin = ({ adminData = dataAdmin }) => {
   const isMobile = useMediaQuery("(max-width:600px)");
+  const [isInitialized, setIsInitialized] = useState(false);
 
   const [avatars, setAvatars] = useState({});
 
   useEffect(() => {
-    adminData?.forEach((admin, index) => {
-      const key = admin.id;
-      cacheAvatarImage(admin.avatar, key).then((cachedAvatar) => {
-        setAvatars((prev) => ({ ...prev, [key]: cachedAvatar }));
+    if (!isInitialized) {
+      dataAdmin?.forEach((admin) => {
+        const key = admin.id;
+        cacheAvatarImage(admin.avatar, key).then((cachedAvatar) => {
+          setAvatars((prev) => ({ ...prev, [key]: cachedAvatar }));
+        });
       });
-    });
-  }, []);
-
-  // useEffect(() => {
-  //   console.log("avatar", avatars);
-  // }, [adminData]);
+      setIsInitialized(true);
+    }
+  }, [isInitialized]);
 
   return (
     <Box
