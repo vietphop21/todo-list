@@ -546,3 +546,5 @@ export const cacheAvatarImage = async (url, key) => {
     reader.readAsDataURL(blob);
   });
 };
+
+export const DOMAIN = "https://checkscam-admin.io.vn/";

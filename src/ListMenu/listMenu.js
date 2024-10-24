@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Grid } from "@mui/material";
 import { ListAdmin } from "../ListAdmin/listAdmin";
-import { dataAdmin } from "../common";
+import { dataAdmin, LOGO } from "../common";
 
 const services = [
   { value: "all", text: "Tất cả" },
@@ -67,16 +67,13 @@ const ListMenu = () => {
       const sortedAdminData = [...dataAdmin].sort((a, b) => a.id - b.id);
       setAdminData(sortedAdminData);
     } else {
+      const randomCount = Math.floor(Math.random() * 21) + 10; // Random số từ 10 đến 30
       const randomAdmins = adminData
         .sort(() => 0.5 - Math.random())
-        .slice(0, 30);
+        .slice(0, randomCount);
       setAdminData(randomAdmins);
     }
   };
-
-  console.log(dataAdmin);
-
-  console.log(adminData);
 
   return (
     <div>
@@ -110,6 +107,8 @@ const ListMenu = () => {
         ))}
       </Grid>
       <ListAdmin adminData={adminData} />
+
+      
     </div>
   );
 };
