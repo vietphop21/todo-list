@@ -56,7 +56,7 @@ export const ListAdmin = ({ adminData = dataAdmin }) => {
                 target="_blank"
                 style={{ textDecoration: "none" }}
               >
-                <Avatar src={avatars[`avatar_${index}`] || admin.avatar} />
+                <Avatar src={avatars[`${index}`] || admin.avatar} />
               </Link>{" "}
               <span>
                 <Link
@@ -71,7 +71,7 @@ export const ListAdmin = ({ adminData = dataAdmin }) => {
                     fontSize: "12px",
                   }}
                 >
-                  {admin.id}. {admin.name}
+                  {index + 1}. {admin.name}
                 </Link>
               </span>
             </Grid>
