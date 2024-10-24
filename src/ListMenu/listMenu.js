@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Grid } from "@mui/material";
 import { ListAdmin } from "../ListAdmin/listAdmin";
-import { dataAdmin, LOGO } from "../common";
+import { dataAdmin } from "../common";
 
 const services = [
   { value: "all", text: "Tất cả" },
@@ -107,8 +107,6 @@ const ListMenu = () => {
         ))}
       </Grid>
       <ListAdmin adminData={adminData} />
-
-      
     </div>
   );
 };
