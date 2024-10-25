@@ -82,13 +82,13 @@ export const ListAdmin = ({ adminData = dataAdmin }) => {
                   <Link
                     onClick={(e) => {
                       e.preventDefault();
-                      const fbAppUrl = `fb://profile/${admin.fbId}`; // Thay admin.fbId bằng ID Facebook của admin
+                      const fbAppUrl = `fb://profile/${admin.uuid}`; // Thay "123456789" bằng Facebook ID thật
                       const fbWebUrl = admin.fb; // URL trang web Facebook
 
-                      // Kiểm tra xem ứng dụng Facebook có thể được mở
+                      // Thử mở ứng dụng Facebook
                       window.location.href = fbAppUrl;
 
-                      // Sau một khoảng thời gian ngắn, nếu không mở được thì chuyển qua trang web
+                      // Nếu không mở được, fallback sang URL web
                       setTimeout(() => {
                         window.open(fbWebUrl, "_blank", "noopener,noreferrer");
                       }, 1000);
