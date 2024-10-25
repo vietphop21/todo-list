@@ -37,21 +37,6 @@ export const ListAdmin = ({ adminData = dataAdmin }) => {
     console.log(ref);
   }, [adminData]);
 
-  function openLink(adminFbLink) {
-    const isIOS =
-      /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
-    if (isIOS && !isSafari) {
-      // Nếu người dùng trên iOS và không sử dụng Safari
-      const safariLink = `safari:${adminFbLink}`;
-      window.location.href = safariLink; // Mở Safari
-    } else {
-      // Mở liên kết bình thường
-      window.open(adminFbLink, "_blank", "noopener,noreferrer");
-    }
-  }
-
   return (
     <>
       <Box
@@ -95,13 +80,12 @@ export const ListAdmin = ({ adminData = dataAdmin }) => {
                 </Link>
                 <span>
                   <Link
-                    onClick={(e) => {
-                      e.preventDefault();
-                      openLink(admin.fb);
-                    }}
+                    href={admin.fb}
+                    rel="noopener noreferrer"
+                    target="_blank"
                     style={{
-                      textDecoration: "none",
                       color: "#000",
+                      textDecoration: "none",
                       display: "block",
                       textTransform: "capitalize",
                       textAlign: "center",
