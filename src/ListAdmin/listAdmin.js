@@ -72,7 +72,7 @@ export const ListAdmin = ({ adminData = dataAdmin }) => {
               >
                 <Link
                   href={admin.fb}
-                  target="_blank"
+                  target="blank"
                   // rel="noopener noreferrer"
                   style={{ textDecoration: "none" }}
                 >
