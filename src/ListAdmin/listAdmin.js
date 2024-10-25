@@ -70,11 +70,18 @@ export const ListAdmin = ({ adminData = dataAdmin }) => {
                 height={90}
                 sx={{ cursor: "pointer" }}
               >
-                <Link href={admin.fb} style={{ textDecoration: "none" }}>
+                <Link
+                  href={admin.fb}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: "none" }}
+                >
                   <Avatar src={avatars[index] || admin.avatar} />
                 </Link>
                 <span>
                   <Link
+                    target="_blank"
+                    rel="noopener noreferrer"
                     href={admin.fb}
                     style={{
                       color: "#000",
