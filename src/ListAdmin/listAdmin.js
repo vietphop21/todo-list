@@ -70,19 +70,20 @@ export const ListAdmin = ({ adminData = dataAdmin }) => {
                 height={90}
                 sx={{ cursor: "pointer" }}
               >
-                <Link
+                <a
                   href={admin.fb}
                   target="_blank"
                   style={{ textDecoration: "none" }}
                   rel="noopener noreferrer"
                 >
                   <Avatar src={avatars[index] || admin.avatar} />
-                </Link>
+                </a>
                 <span>
                   <Link
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={admin.fb}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.open(admin.fb, "_blank", "noopener,noreferrer");
+                    }}
                     style={{
                       textDecoration: "none",
                       color: "#000",
