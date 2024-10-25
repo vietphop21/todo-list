@@ -82,7 +82,16 @@ export const ListAdmin = ({ adminData = dataAdmin }) => {
                   <Link
                     onClick={(e) => {
                       e.preventDefault();
-                      window.open(admin.fb, "_blank", "noopener,noreferrer");
+                      const fbAppUrl = `fb://profile/${admin.fbId}`; // Thay admin.fbId bằng ID Facebook của admin
+                      const fbWebUrl = admin.fb; // URL trang web Facebook
+
+                      // Kiểm tra xem ứng dụng Facebook có thể được mở
+                      window.location.href = fbAppUrl;
+
+                      // Sau một khoảng thời gian ngắn, nếu không mở được thì chuyển qua trang web
+                      setTimeout(() => {
+                        window.open(fbWebUrl, "_blank", "noopener,noreferrer");
+                      }, 1000);
                     }}
                     style={{
                       textDecoration: "none",
