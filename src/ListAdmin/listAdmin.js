@@ -70,32 +70,20 @@ export const ListAdmin = ({ adminData = dataAdmin }) => {
                 height={90}
                 sx={{ cursor: "pointer" }}
               >
-                <a
+                <Link
                   href={admin.fb}
-                  target="_blank"
                   style={{ textDecoration: "none" }}
-                  rel="noopener noreferrer"
+                  target="blank"
                 >
                   <Avatar src={avatars[index] || admin.avatar} />
-                </a>
+                </Link>
                 <span>
                   <Link
-                    onClick={(e) => {
-                      e.preventDefault();
-                      const fbAppUrl = `fb://profile/${admin.uuid}`; // Thay "123456789" bằng Facebook ID thật
-                      const fbWebUrl = admin.fb; // URL trang web Facebook
-
-                      // Thử mở ứng dụng Facebook
-                      window.location.href = fbAppUrl;
-
-                      // Nếu không mở được, fallback sang URL web
-                      setTimeout(() => {
-                        window.open(fbWebUrl, "_blank", "noopener,noreferrer");
-                      }, 1000);
-                    }}
+                    href={admin.fb}
+                    target="_blank"
                     style={{
-                      textDecoration: "none",
                       color: "#000",
+                      textDecoration: "none",
                       display: "block",
                       textTransform: "capitalize",
                       textAlign: "center",
