@@ -13,7 +13,7 @@ export const dataAdmin = [
   {
     id: 1,
     name: "Nguyễn Hoàng Dương",
-    fb: "https://zfacebook.com/100002774675090",
+    fb: "https://www.facebook.com/100002774675090",
     uuid: "100002774675090",
     avatar:
       "https://graph.facebook.com/100002774675090/picture?width=100&height=100&access_token=6628568379|c1e620fa708a1d5696fb991c1bde5662",
