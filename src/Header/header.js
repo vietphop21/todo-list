@@ -6,7 +6,7 @@ export const Header = () => {
     <>
       <Grid container px={8} py={2} flexDirection="column" alignItems="center">
         <Grid item xs={12}>
-          <img className="logo" src={LOGO} />
+          <img className="lfvogo" src={LOGO} />
         </Grid>
 
         <Grid item xs={12}>
