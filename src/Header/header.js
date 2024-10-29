@@ -10,7 +10,7 @@ export const Header = () => {
         </Grid>
 
         <Grid item xs={12}>
-          <strong style={{ color: "red", fontSize: "26px" }}>
+          <strong style={{ color: "red", fontSize: "25px" }}>
             QUỸ BẢO HIỂM CS
           </strong>
         </Grid>
