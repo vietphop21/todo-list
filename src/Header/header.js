@@ -11,7 +11,7 @@ export const Header = () => {
 
         <Grid item xs={12}>
           <strong style={{ color: "red", fontSize: "26px" }}>
-            QUỸ BẢO HIỂM CS211
+            QUỸ BẢO HIỂM CS
           </strong>
         </Grid>
       </Grid>
