@@ -24,7 +24,7 @@ export const FooterButton = () => {
             sx={{ backgroundColor: "#ff0000", flex: 1, padding: "5px" }} // Màu đỏ
           >
             <Link
-              href="https://checkscam.vn/to-cao-lua-dao/?_gl=1*lf4aqc*_ga*MTkzODA4MDAwNy4xNzI1ODA1MTcy*_ga_8WTQQ9LFJB*MTcyOTc3NTcxNi43LjEuMTcyOTc3NzYyMC41Ni4wLjE4MjY5NDgwODk."
+              href="https://checkscam-admin.io.vn/danh-sach-admin"
               style={{
                 fontSize: "13px",
                 textDecoration: "none",

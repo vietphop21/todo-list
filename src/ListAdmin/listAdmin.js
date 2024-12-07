@@ -70,10 +70,7 @@ export const ListAdmin = ({ adminData = dataAdmin }) => {
                 height={90}
                 sx={{ cursor: "pointer" }}
               >
-                <Link
-                  href={admin.fb}
-                  style={{ textDecoration: "none" }}
-                >
+                <Link href={admin.fb} style={{ textDecoration: "none" }}>
                   <Avatar src={avatars[index] || admin.avatar} />
                 </Link>
                 <span>
@@ -112,14 +109,14 @@ export const ListAdmin = ({ adminData = dataAdmin }) => {
           <p>
             <Link
               style={{ textDecoration: "none" }}
-              href="https://checkscam.vn/lien-he/?_gl=1*vc5886*_ga*MTkzODA4MDAwNy4xNzI1ODA1MTcy*_ga_8WTQQ9LFJB*MTcyOTc3NTcxNi43LjEuMTcyOTc3NjcyMC4yNi4wLjE4MjY5NDgwODk"
+              href="https://checkscam-admin.io.vn/danh-sach-admin"
             >
               Liên hệ AD
             </Link>{" "}
             |{" "}
             <Link
               style={{ textDecoration: "none" }}
-              href="https://checkscam.vn/marketing/?_gl=1*vc5886*_ga*MTkzODA4MDAwNy4xNzI1ODA1MTcy*_ga_8WTQQ9LFJB*MTcyOTc3NTcxNi43LjEuMTcyOTc3NjcyMC4yNi4wLjE4MjY5NDgwODk"
+              href="https://checkscam-admin.io.vn/danh-sach-admin"
             >
               Quảng cáo
             </Link>
@@ -130,14 +127,14 @@ export const ListAdmin = ({ adminData = dataAdmin }) => {
           <p>
             <Link
               style={{ textDecoration: "none" }}
-              href="https://admin.checkscam.vn/dieu-khoan-admin/"
+              href="https://checkscam-admin.io.vn/danh-sach-admin"
             >
-              Đăng kí bảo hiểm{" "}
+              Đăng kí bảo hiểm1{" "}
             </Link>{" "}
             ★{" "}
             <Link
               style={{ textDecoration: "none" }}
-              href="https://admin.checkscam.vn/noi-quy-giao-dich/"
+              href="https://checkscam-admin.io.vn/danh-sach-admin"
             >
               Nội quy box giao dịch
             </Link>
