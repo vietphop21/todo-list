@@ -4,12 +4,13 @@ export const LOGO =
 export const dataAdmin = [
   {
     id: 0,
-    name: "Nguyễn Chí Tài",
-    fb: "https://www.facebook.com/100029916812019",
-    uuid: "100029916812019",
+    name: "Nguyễn Hồng Dương",
+    fb: "https://www.facebook.com/100050903076496",
+    uuid: "100050903076496",
     avatar:
-      "https://graph.facebook.com/100029916812019/picture?width=100&height=100&access_token=6628568379|c1e620fa708a1d5696fb991c1bde5662",
+      "https://graph.facebook.com/100050903076496/picture?width=100&height=100&access_token=6628568379|c1e620fa708a1d5696fb991c1bde5662",
   },
+
   {
     id: 1,
     name: "Nguyễn Hoàng Dương",
@@ -28,12 +29,13 @@ export const dataAdmin = [
   },
   {
     id: 3,
-    name: "Nguyễn Hồng Dương",
-    fb: "https://www.facebook.com/100050903076496",
-    uuid: "100050903076496",
+    name: "Nguyễn Chí Tài",
+    fb: "https://www.facebook.com/100029916812019",
+    uuid: "100029916812019",
     avatar:
-      "https://graph.facebook.com/100050903076496/picture?width=100&height=100&access_token=6628568379|c1e620fa708a1d5696fb991c1bde5662",
+      "https://graph.facebook.com/100029916812019/picture?width=100&height=100&access_token=6628568379|c1e620fa708a1d5696fb991c1bde5662",
   },
+
   {
     id: 4,
     name: "Trần Ngọc Thu",
